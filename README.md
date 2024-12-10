@@ -12,6 +12,7 @@ Możliwe produkty to:
 3. Mysz: 90 PLN,
 4. Monitor 1000 PLN,
 5. Kaczka debuggująca: 66 PLN
+
 Aplikacja powinna uwzględniać logikę zniżek: 10% zniżki na drugi tańszy produkt, lub (alternatywa
 rozłączna) 20% zniżki na 3 najtańszy produkt. Dodatkowo jeśli zamówienie przekroczy wartość 5000
 PLN powinna być doliczona zniżka 5% do całego zamówienia.
