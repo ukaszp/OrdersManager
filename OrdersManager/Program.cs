@@ -28,9 +28,6 @@ namespace OrdersManager
                     case 1:
                         //case
                         break;
-                    case 2:
-                        //case
-                        break;
                     case 3:
                         System.Environment.Exit(1);
                         break;

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrdersManager.Data
+namespace OrdersManager.Services
 {
-    internal class Order
+    internal class ProductsMenu
     {
-        public List<Product> Items { get; set; } = new List<Product>();
     }
 }
