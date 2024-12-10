@@ -1,4 +1,6 @@
-﻿using OrdersManager.Services;
+﻿using Microsoft.Extensions.DependencyInjection;
+using OrdersManager.Services;
+using OrdersManager.Services.OrdersManager.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,29 +13,21 @@ namespace OrdersManager
     {
         static void Main(string[] args)
         {
+            var serviceProvider = new ServiceCollection()
+               .AddSingleton<IOrderService, OrderService>()
+               .AddSingleton<IMenu, MainMenu>()
+               .AddSingleton<IMenu, ProductsMenu>()
+               .AddSingleton<IMenu, DeleteProductsMenu>()
+               .BuildServiceProvider();
 
-            bool exit = false;
-            Menu menu = new Menu();
-            List<string> elements = new List<string>{ "Dodaj produkt", "Usuń produkt", "Wyświetl wartość zamówienia", "Wyjdź"};
-            menu.Setup(elements);
+            var orderService = serviceProvider.GetService<IOrderService>();
 
-            while (!exit)
-            {
-                var selection = menu.Open();
-                switch (selection)
-                {
-                    case 0:
-                        // case
-                        break;
-                    case 1:
-                        //case
-                        break;
-                    case 3:
-                        System.Environment.Exit(1);
-                        break;
-                }
-                Console.Clear();
-            }
+            IMenu mainMenu = new MainMenu(orderService);
+            IMenu productMenu = new ProductsMenu(orderService);
+            IMenu deleteMenu = new DeleteProductsMenu(orderService);
+
+            var controller = new MenuController(mainMenu, productMenu, deleteMenu);
+            controller.Run();
 
             Console.ReadKey(true);
         }

@@ -1,0 +1,27 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Laptop",
+    "Price": 2500.0
+  },
+  {
+    "Id": 2,
+    "Name": "Klawiatura",
+    "Price": 120.0
+  },
+  {
+    "Id": 3,
+    "Name": "Mysz",
+    "Price": 90.0
+  },
+  {
+    "Id": 4,
+    "Name": "Monitor",
+    "Price": 1000.0
+  },
+  {
+    "Id": 5,
+    "Name": "Kaczka debuggowania",
+    "Price": 66.0
+  }
+]

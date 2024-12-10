@@ -41,13 +41,13 @@ namespace OrdersManager.Services
 
                     if (i == chosen)
                     {
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
-                        Console.BackgroundColor = ConsoleColor.DarkGreen;
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Black;
                     }
                     Console.SetCursorPosition((Console.WindowWidth / 2) - 5, (Console.WindowHeight / 2) + i);
                     Console.WriteLine(elements[i].PadRight(max));
