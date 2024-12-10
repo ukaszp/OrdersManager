@@ -1,7 +1,7 @@
-##Console Order Manager
+## Console Order Manager
 recruitment task
 
-###Task:
+### Task:
 Napisz aplikację konsolową, która umożliwia składanie zamówień.
 Aplikacja powinna posiadać klasy związane z logika biznesową: Product, OrderITem oraz Order.
 Aplikacja powinna umożliwiać 4 operacje: Dodanie produktu, usunięcie produktu, wyświetlenie
